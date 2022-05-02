@@ -13,24 +13,25 @@ const FruitDetail = () => {
         .then(data => setFruit(data))
     },[])
     return (
-      <div className="col-md-4">
-        <div className="card">
-          <img src={fruit.img} class="card-img-top img-fluid" alt="..." />
-          <div className="card-body">
-            <h5 className="card-title">{fruit.name}</h5>
-            <p>{fruit._id}</p>
-            <p>{fruit.supplier}</p>
-            <p>price: ${fruit.price}</p>
-            <p>Quantity:{fruit.quantity}</p>
-            <p className="card-text">{fruit.description}</p>
-            <button type="button" className="btn btn-warning">
-              Stock update
-            </button>
+      <div className="card">
+        <div className="col-md-4 mx-auto mt-2">
+          <div className="card">
+            <img src={fruit.img} className="card-img-top img-fluid" alt="..." />
+            <div className="card-body">
+              <h5 className="card-title">{fruit.name}</h5>
+              <p>{fruit._id}</p>
+              <p>{fruit.supplier}</p>
+              <p>price: ${fruit.price}</p>
+              <p>Quantity:{fruit.quantity}</p>
+              <p className="card-text">{fruit.description}</p>
+              
+            </div>
           </div>
+          <button type="button" className="btn btn-warning">
+            manag item
+          </button>
         </div>
-        <button type="button" className="btn btn-warning">
-              manag item
-            </button>
+     
       </div>
     );
 };

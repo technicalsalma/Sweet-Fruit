@@ -16,7 +16,7 @@ const Home = () => {
       <div className="container">
         <h1 className="text-center my-5">My Fruits Warehouse Services</h1>
         <div className="row gy-5">
-          {fruits.map((fruit) => (
+          {fruits.slice(0,6).map((fruit) => (
             <FruitServices key={fruit._id} fruit={fruit}></FruitServices>
           ))}
         </div>
