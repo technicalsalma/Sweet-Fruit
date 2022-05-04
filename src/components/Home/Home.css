@@ -1,0 +1,17 @@
+.navber{
+    background-color: 	rgba(189, 54, 121, 0.42);
+}
+
+.logo{
+    width: 80px;
+    height: 80px;
+}
+
+.text-style{
+    text-align: center;
+    color: rgb(107, 138, 5);
+    font-weight: bold;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    text-shadow: 16px 22px 11px rgba(168,158,32,0.2);
+}

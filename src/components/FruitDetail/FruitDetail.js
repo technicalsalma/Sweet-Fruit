@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const FruitDetail = () => {
    
     const { fruitId } = useParams();
     const [fruit, setFruit] =useState({});
+    const navigate = useNavigate();
     
     useEffect(()=>{
         const url = `http://localhost:5000/fruitService/${fruitId}`
@@ -24,14 +25,16 @@ const FruitDetail = () => {
               <p>price: ${fruit.price}</p>
               <p>Quantity:{fruit.quantity}</p>
               <p className="card-text">{fruit.description}</p>
-              
             </div>
           </div>
-          <button type="button" className="btn btn-warning">
+          <button
+            onClick={() => navigate("/manageitems")}
+            type="button"
+            className="btn btn-warning"
+          >
             manag item
           </button>
         </div>
-     
       </div>
     );
 };

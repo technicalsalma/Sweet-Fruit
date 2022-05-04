@@ -1,0 +1,27 @@
+.navber-top{
+    margin-top: 0;
+    padding: 0;
+    background-color:#5FC098;
+    
+}
+.textColor{
+    margin: me-auto;
+}
+ #text-style:hover {
+    background-color: rgb(9, 125, 52);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+ #text-styles:hover {
+    background-color: rgb(9, 125, 52);
+   
+}
+
+.button{
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px; 
+    cursor: pointer;
+}

@@ -1,29 +1,30 @@
 
 
-
-
-
  .footer{
-    margin-top: 150px;
+    margin-top: 100px;
     width: 100%;
     padding: 50px 10%;
     background: #333;
     color: #efefef;
-    display: flex;
+  
+}
+.footer-items{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 .footer div{
     text-align: center;
 }
-.col-1{
+/* .col-1{
     width: 25%;
-}
-.col-2{
+} */
+/* .col-2{
     flex-grow: 2;
-}
+} */
 
-.footer div h3{
-    font-weight: 300;
-    margin-bottom: 30px;
+.footer div h4{
+    font-weight: 200;
+    margin-bottom: 20px;
     letter-spacing: 1px;
 }
 .col-1 a{
@@ -33,11 +34,11 @@
     margin-bottom: 10px;
 }
 form input{
-    width: 400px;
+    width: 250px;
     height: 45px;
     border-radius: 4px;
-    text-align: center;
-    margin-top: 20px;
+    padding: 8px;
+    margin-top: 10px;
     margin-bottom: 40px;
     outline: none;
     border: none;
@@ -45,8 +46,8 @@ form input{
 form button{
     background: transparent;
     border: 2px solid #fff;
-    border-radius: 30px;
-    padding: 10px 30px;
+    border-radius: 20px;
+    padding: 10px 50px;
     font-size: 15px; 
     cursor: pointer;
 } 

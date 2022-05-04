@@ -1,0 +1,15 @@
+.allitems-container{
+    margin: 0 200px;
+}
+.all-items{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    text-align: left;
+    border: 1px solid gray;
+    padding: 10px;
+}
+.all-items button{
+    border-radius: 10px;
+    border: none;
+    padding: 5px 20px;
+}
