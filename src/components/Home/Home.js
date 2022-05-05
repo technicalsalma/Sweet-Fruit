@@ -9,12 +9,7 @@ import './Home.css'
 
 const Home = () => {
   const [fruits, setfruits] = useFruitItem();
-
-  const navigate = useNavigate()
-  const hanleAddInventory = () =>{
-    navigate('/addinventory');
-  }
-
+  const navigate = useNavigate();
   
   return (
     <div>
@@ -28,11 +23,18 @@ const Home = () => {
             <FruitServices key={fruit._id} fruit={fruit}></FruitServices>
           ))}
         </div>
-      </div>
-      <button onClick={hanleAddInventory} className="btn_2">
-        New Item
-      </button>
 
+       
+          <button
+            onClick={() => navigate("/manageitems")}
+            type="button"
+            className="manag-btn"
+          >
+            All-manag-item
+          </button>
+        
+        <div className="border border-1"></div>
+      </div>
       <ExtraPart1></ExtraPart1>
     </div>
   );

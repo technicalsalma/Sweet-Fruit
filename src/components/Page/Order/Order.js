@@ -1,6 +1,6 @@
 import React from 'react';
 import fresh from '../../../imges/order-img/fruit-1.png';
-import dalivery from '../../../imges/order-img/free-delivery-1-1.png';
+import dalivery from '../../../imges/order-img/food-donation.jpg';
 import store from '../../../imges/order-img/grocery.png'
 import './Order.css'
 
@@ -11,7 +11,7 @@ const Order = () => {
           <h5 className="mb-3">
             Fresh Fruits Online & Fresh Vegetables Online
           </h5>
-          <p className='pragraph-text'>
+          <p className="pragraph-text">
             We’re not your average fruit importers. We have expertise in
             sourcing the choicest of fresh fruits from around the world and
             distributing it across the length and breadth of India. Our
@@ -30,14 +30,14 @@ const Order = () => {
 
         <div className="online-order">
           <div>
-            <img src={fresh} alt="" />
+            <img  src={fresh} alt="" />
             <h5>FRESH GROCERY</h5>
             <p>
               Quality and A grade grocery right from the farms at your doorstep.
             </p>
           </div>
           <div>
-            <img src={dalivery} alt="" />
+            <img className='w-50' src={dalivery} alt="" />
             <h5>FREE HOME DELIVERY</h5>
             <p>
               We offer free home delivery to all our clients. all you have to do

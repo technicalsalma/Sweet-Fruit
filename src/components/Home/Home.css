@@ -1,17 +1,35 @@
-.navber{
-    background-color: 	rgba(189, 54, 121, 0.42);
+.navber {
+  background-color: rgba(189, 54, 121, 0.42);
 }
 
-.logo{
-    width: 80px;
-    height: 80px;
+.logo {
+  width: 80px;
+  height: 80px;
 }
 
-.text-style{
-    text-align: center;
-    color: rgb(107, 138, 5);
-    font-weight: bold;
-    margin-top: 80px;
-    margin-bottom: 50px;
-    text-shadow: 16px 22px 11px rgba(168,158,32,0.2);
+.text-style {
+  text-align: center;
+  color: rgb(107, 138, 5);
+  font-weight: bold;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  text-shadow: 16px 22px 11px rgba(168, 158, 32, 0.2);
+}
+.manag-btn {
+    color: #fff;
+    margin: 20px 0;
+    border: none;
+    background-color: rgb(114, 143, 22);
+    margin-left: 467px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.manag-btn:hover {
+   background-color: rgb(79, 101, 3); 
+}
+
+
+@media screen and (max-width: 600px){
+  
 }

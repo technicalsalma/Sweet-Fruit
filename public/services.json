@@ -1,147 +1,147 @@
 [
   {
-    "id": 1,
+    
     "name": "Fresh-Food",
     "price": "100",
-    "quantity": "50kg",
+    "quantity": "500",
     "supplier": "Tarak Rahman",
     "description": "Fruit, the fleshy or dry ripened ovary of a flowering plant, enclosing the seed or seeds. Thus, apricots, bananas, and grapes, as well as bean pods, corn grains, tomatoes, cucumbers, and (in their shells) acorns and almonds, are all technically fruits.",
     "img": "https://i.ibb.co/N1xF6YP/sl1.png"
   },
 
   {
-    "id": 2,
+    
     "name": "Strawberry",
     "price": "300",
-    "quantity": "90kg",
+    "quantity": "900",
     "supplier": "Salma Sorker",
     "description": "A strawberry is actually a multiple fruit which consists of many tiny individual fruits embedded in a fleshy receptacle. The brownish or whitish specks, which are commonly considered seeds.",
     "img": "https://i.ibb.co/JnVD2ZX/652742.jpg"
   },
 
   {
-    "id": 3,
+    
     "name": "Stok-Food",
     "price": "400",
-    "quantity": "80kg",
+    "quantity": "800",
     "supplier": "SK Shiderd",
     "description": "The fruits or the fruit of someone's work or activity are the good things that result from it. The team have really worked hard and are enjoying the fruits of that labour, are the true fruits, called achenes",
     "img": "https://i.ibb.co/mDTw2s8/hyy.jpg"
   },
 
   {
-    "id": 4,
+    
     "name": "orginal-Food",
     "price": "300",
-    "quantity": "50kg",
+    "quantity": "500",
     "supplier": "PK Rajandorand",
     "description": "In general terms, fruits are usually sweet and vegetables are savory. Fruits are often eaten as a dessert and vegetables as a main course.which contain mostly seeds, but are also made of ovary tissue. Fruits are usually tasty and eaten when raw. and have a positive effect on blood sugar.",
     "img": "https://i.ibb.co/s3YQzr0/85372696.jpg"
   },
 
   {
-    "id": 5,
+   
     "name": "Mix-Fruits",
     "price": "600",
-    "quantity": "600kg",
+    "quantity": "600",
     "supplier": "Rabbi",
     "description": "Fruits include other spices, for example – allspice, vanilla beans, peppers, fennel seeds, black peppers, coriander, melons and squash including cucumber, pumpkin, watermelon, berries, cranberry , grains, and grains, like – corn, wheat, rice, which contain mostly seeds, but are also made of ovary tissue",
     "img": "https://i.ibb.co/0MD26Fc/fruit.jpg"
   },
 
   {
-    "id": 6,
+    
     "name": "Vegetablesa fruits",
     "price": "200",
-    "quantity": "50kg",
+    "quantity": "509",
     "supplier": "Momin Islam",
     "description": "A diet rich in vegetables and fruits can lower blood pressure, reduce the risk of heart disease and stroke, prevent certain types of cancer, reduce the risk of eye and digestive problems. Eating vegetables and starchy fruits such as apples, pears, and leafy greens can also promote weight loss.",
     "img": "https://i.ibb.co/L8KCRY1/1561975238691-jpg-500x500.jpg"
   },
 
   {
-    "id": 7,
+    
     "name": "Strawberry-mix",
     "price": "200",
-    "quantity": "500kg",
+    "quantity": "400",
     "supplier": "Pranto khondoker",
     "description": "Fruits can lower blood pressure, reduce the risk of heart disease and stroke,The fruits or the fruit of someone's work or activity are the good things that result from it.Unlike these other fruits, the skin of a mango is very tough and also inedible.",
     "img": "https://i.ibb.co/23T1pJP/205.jpg"
   },
 
   {
-    "id": 8,
+    
     "name": "Lichi",
     "price": "400",
-    "quantity": "50kg",
+    "quantity": "800",
     "supplier": "PR Pari",
     "description": "The fruits are oval to round, strawberry-red in colour, and about 25 mm (1 inch) in diameter. The brittle outer covering encloses a translucent white fleshy aril and one large seed. Ripe fruits on a lychee tree (Litchi chinensis).",
     "img": "https://i.ibb.co/28w1TS0/max.jpg"
   },
 
   {
-    "id": 9,
+    
     "name": "Banana",
     "price": "200",
-    "quantity": "50kg",
+    "quantity": "90",
     "supplier": "Joda AKbor",
     "description": "banana Add to list Share. A banana is a curved, yellow fruit with a thick skin and soft sweet flesh. If you eat a banana every day for breakfast, your roommate might nickname you  A banana is a tropical fruit that's quite popular all over the world. It grows in bunches on a banana tree.",
     "img": "https://i.ibb.co/GV1szDv/Why.jpg"
   },
 
   {
-    "id": 10,
+   
     "name": "Mango",
-    "price": "700",
-    "quantity": "500kg",
+    "price": "70",
+    "quantity": "30",
     "supplier": "Mousumi Rahman",
     "description": "A mango is a sweet tropical fruit, and it's also the name of the trees on which the fruit grows. Ripe mangoes are juicy, fleshy, and delicious. Like peaches and plums, mangoes have an inedible pit at the center. ",
     "img": "https://i.ibb.co/HNYLcSz/wicker-basket.jpg"
   },
 
   {
-    "id": 11,
+    
     "name": "Pineapple",
     "price": "100",
-    "quantity": "50kg",
+    "quantity": "50",
     "supplier": "Nodi Gos",
     "description": "A pineapple is a sweet tropical fruit with a tough leathery skin and spiky leaves on top. Pineapple is excellent, whether eaten as a snack, in a sweet dessert, in savory dishes like fried rice, or even on pizza.",
     "img": "https://i.ibb.co/v3ftmqV/dow.jpg"
   },
 
   {
-    "id": 12,
+   
     "name": "Organic-Food",
     "price": "100",
-    "quantity": "50kg",
+    "quantity": "50",
     "supplier": "Bela Bos",
     "description": "Organic food, ecological food or biological food are food and drinks produced by methods. Organic foods include fresh produce, meats, and dairy products as well as processed foods such as crackers, drinks.",
     "img": "https://i.ibb.co/SXj9QCn/Retailer.jpg"
   },
 
   {
-    "id": 13,
+    
     "name": "Apple",
     "price": "100",
-    "quantity": "50kg",
+    "quantity": "60",
     "supplier": "Mahir Laheri",
     "description": "When harvested, apples are usually roundish, 5–10 cm (2–4 inches) in diameter, and some shade of red, green, or yellow in colour; they vary in size, shape, and acidity depending on the variety.",
     "img": "https://i.ibb.co/YTWB1Nc/apple.jpg"
   },
   {
-    "id": 14,
+    
     "name": "Guava",
     "price": "100",
-    "quantity": "50kg",
+    "quantity": "90",
     "supplier": "Sorder Patel",
     "description": "The fruits are round to pear-shaped and measure up to 7.6 cm in diameter; their pulp contains many small hard seeds (more abundant in wild forms than in cultivated varieties). ",
     "img": "https://i.ibb.co/cTmMsMd/guava.jpg"
   },
   {
-    "id": 14,
+    
     "name": "Orange",
     "price": "100",
-    "quantity": "50kg",
+    "quantity": "40",
     "supplier": "Halin Pandu",
     "description": "Oranges are round orange-coloured fruit that grow on a tree which can reach 10 metres (33 ft).Orange trees have dark green shiny leaves and small white flowers with five petals.",
     "img": "https://i.ibb.co/Tk67c39/images-6.jpg"

@@ -1,17 +1,75 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import useFruitItem from '../Hook/useFuritItem';
 
-import useFruitItem from "../Hook/useFuritItem";
-import Manageitem from '../Manageitem/Manageitem';
-import './ManageItems.css'
+import './ManageItems.css';
 
 const ManageItems = () => {
      const [fruits, setfruits] = useFruitItem();
+    const navigate = useNavigate();
+
+    const handleAddInventory = () => {
+        navigate('/addinventory');
+    }
+    
+    const handleButton = id => {
+        const proceed = window.confirm('Do you want to delete?');
+        if (proceed) {
+            const url = `http://localhost:5000/fruitService/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const remaining = fruits.filter(
+                      (fruitService) => fruitService._id !== id
+                    );
+                    setfruits(remaining);
+                });
+
+        }
+    }
+
     return (
-      <div className="container">
-        <h1 className="text-style">Our Food Strok</h1>
-        <div className="row gy-5">
-          {fruits.map((fruit) => (
-            <Manageitem key={fruit._id} fruit={fruit}></Manageitem>
-          ))}
+      <div>
+        <h2 className="text-center my-3">
+          <i className="">Our all management items</i>
+        </h2>
+        <div className="container">
+          <div className="row gy-5">
+            {fruits.map((fruit) => (
+              <div key={fruit._id}>
+                <div className="all-manage-items">
+                  <div className="all-manage-items-info">
+                    <h2>{fruit.name}</h2>
+                    <p>Id: {fruit._id}</p>
+                    <h5>Suplier Name: {fruit.supplier}</h5>
+                    <p>
+                      Price: <small>{fruit.price}</small>
+                    </p>
+                    <p>
+                      Quantity: <small>{fruit.quantity}</small>
+                    </p>
+                    <div>
+                      <button onClick={() => handleButton(fruit._id)}>
+                        Delete
+                      </button>
+                    </div>
+                  </div>
+                  <div>
+                    <img src={fruit.img} alt="" />
+                  </div>
+                </div>
+                <hr />
+              </div>
+            ))}
+          </div>
+          <div>
+            <button onClick={handleAddInventory} className="btn_2">
+              Add New Item
+            </button>
+          </div>
         </div>
       </div>
     );

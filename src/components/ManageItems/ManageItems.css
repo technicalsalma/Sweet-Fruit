@@ -1,0 +1,34 @@
+.all-manage-items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.all-manage-items img{
+    height: 200px;
+    width: 250px;
+}
+.all-manage-items-info{
+    margin: 10px 0 ;
+    text-align: left;
+}
+.all-manage-items-info h2{
+   font-size: 20px;
+}
+.all-manage-items-info h5{
+    font-size: 16px;
+ }
+ .all-manage-items-info p{
+    font-size: 14px;
+ }
+ .all-manage-items-info button{
+     border-radius: 5px;
+ }
+ @media screen and (max-width: 600px) {
+    .all-manage-items{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
