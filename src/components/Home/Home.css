@@ -31,5 +31,7 @@
 
 
 @media screen and (max-width: 600px){
-  
+  .manag-btn{
+   margin-left: 17px;
+  }
 }

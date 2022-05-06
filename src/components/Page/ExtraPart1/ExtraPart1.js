@@ -16,7 +16,7 @@ const ExtraPart1 = () => {
             <Accordion defaultActiveKey={["0"]} alwaysOpen>
               <Accordion.Item eventKey="0">
                 <Accordion.Header>
-                  <h2 className="fs-1"> what is fruit warehouse meaning?</h2>
+                  <h2 className="fs-3"> what is fruit warehouse meaning?</h2>
                 </Accordion.Header>
                 <Accordion.Body>
                   A place for storing fresh fruits. In order to preserve fruits

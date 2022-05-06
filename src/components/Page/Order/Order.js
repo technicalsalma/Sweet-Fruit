@@ -1,15 +1,16 @@
 import React from 'react';
 import fresh from '../../../imges/order-img/fruit-1.png';
-import dalivery from '../../../imges/order-img/food-donation.jpg';
+import dalivery from '../../../imges/order-img/free-delivery-1-1.png';
 import store from '../../../imges/order-img/grocery.png'
+
 import './Order.css'
 
 const Order = () => {
     return (
       <div className="container">
         <div className="text-center mt-5 mb-5 pt-5">
-          <h5 className="mb-3">
-            Fresh Fruits Online & Fresh Vegetables Online
+          <h5 className="mb-3 fs-1">
+            <i>Fresh Fruits Warehouse</i>
           </h5>
           <p className="pragraph-text">
             We’re not your average fruit importers. We have expertise in
@@ -30,18 +31,19 @@ const Order = () => {
 
         <div className="online-order">
           <div>
-            <img  src={fresh} alt="" />
+            <img src={fresh} alt="" />
             <h5>FRESH GROCERY</h5>
             <p>
               Quality and A grade grocery right from the farms at your doorstep.
             </p>
           </div>
           <div>
-            <img className='w-50' src={dalivery} alt="" />
-            <h5>FREE HOME DELIVERY</h5>
+            <img src={dalivery} alt="" />
+            <h5 className="fs-4">Freshness Guaranteed</h5>
             <p>
-              We offer free home delivery to all our clients. all you have to do
-              is just make a call.
+              Fruits can be eaten raw, frozen, stewed, cooked, or dried. All
+              fruits may be classified into three major groups: simple,
+              aggregate, or multiple.
             </p>
           </div>
           <div>

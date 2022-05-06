@@ -6,3 +6,11 @@
 .faq img{
     width: 400px;
 }
+
+@media screen and (max-width:600px){
+    .faq{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-gap: 0;
+}
+}

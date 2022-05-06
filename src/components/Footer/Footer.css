@@ -1,7 +1,7 @@
 
 
  .footer{
-    margin-top: 100px;
+    margin-top: 70px;
     width: 100%;
     padding: 50px 10%;
     background: #333;
@@ -15,39 +15,48 @@
 .footer div{
     text-align: center;
 }
-/* .col-1{
-    width: 25%;
-} */
-/* .col-2{
-    flex-grow: 2;
-} */
-
-.footer div h4{
-    font-weight: 200;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
+.footer div{
+    text-align: center;
 }
+.col-1 {
+    flex: 0 0 auto;
+    width: 44.333333%;
+}
+.col-5 p{
+     color: #c3c3c3ec;
+    font-size: 14px;
+}
+
+
 .col-1 a{
     display: block;
     text-decoration: none;
-    color: #efefef;
-    margin-bottom: 10px;
+    color: #c3c3c3ec;
+    font-size: 14px;
+    
 }
-form input{
-    width: 250px;
-    height: 45px;
-    border-radius: 4px;
-    padding: 8px;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    outline: none;
-    border: none;
+
+.manage{
+    color: #c3c3c3ec;
+    background-color: transparent;
+    border: 1px solid silver;
+    padding: 0 8px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    font-size: 14px;
 }
-form button{
-    background: transparent;
-    border: 2px solid #fff;
-    border-radius: 20px;
-    padding: 10px 50px;
-    font-size: 15px; 
-    cursor: pointer;
-} 
+.manage:hover{
+    background-color: black;
+ }
+
+@media screen and (max-width:600px) {
+    .footer-items{
+    display: grid;
+    grid-template-columns: 45% 45%;
+}
+.manage{
+   width: 300px;
+   margin-left: 8px;
+}
+}
+

@@ -16,3 +16,11 @@
 .online-order div P{
 color: gray;
 }
+
+@media screen and (max-width:600px){
+  .online-order{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    
+}
+}

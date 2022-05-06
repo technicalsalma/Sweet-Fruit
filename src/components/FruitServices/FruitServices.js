@@ -11,7 +11,7 @@ const FruitServices = ({ fruit }) => {
   }
 
   return (
-    <div className="col-md-4">
+    <div className="col-sm-12 col-md-6 col-lg-4">
       <div className="card">
         <img src={img} class="card-img-top img-fluid" alt="..." />
         <div className="card-body">

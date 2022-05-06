@@ -7,6 +7,13 @@ const FruitDetail = () => {
     const stockRef = useRef("");
     const [fruit, setFruit] =useState({});
     const navigate = useNavigate();
+    // const {_id, name, img, supplier, price, quantity, description } = fruit;
+ 
+
+ 
+    // const navigateToFruitDetail = (_id) => {
+    //   navigate(`/fruit/${_id}`);
+    // };
     
     useEffect(()=>{
         const url = `http://localhost:5000/fruitService/${fruitId}`
@@ -70,42 +77,61 @@ const FruitDetail = () => {
             })
         event.target.reset()
     }
+  
 
     return (
-      <div className="card">
-        <div className="col-md-4 mx-auto mt-2">
-          <div className="card">
-            <img src={fruit.img} className="card-img-top img-fluid" alt="..." />
-            <div className="card-body">
-              <h5 className="card-title">{fruit.name}</h5>
-              <p>{fruit._id}</p>
-              <p>{fruit.supplier}</p>
-              <p>price: ${fruit.price}</p>
-              <p>Quantity:{fruit.quantity}</p>
-              <p className="card-text">{fruit.description}</p>
+      <div className=" container">
+        <h2 className="text-center my-3">
+          <i className="">Single management item Details</i>
+        </h2>
+      <div className="card mb-3">
+          <div className="row g-0">
+            <div className="col-md-4">
+              <img
+                src={fruit.img}
+                className="img-fluid pt-5 px-5 rounded-start\"
+                alt="..."
+              />
+              <p className="card-text px-4">{fruit.description}</p>
+            </div>
+            <div className="col-md-8">
+              <div className="card-body pt-5 mt-5">
+                <h5 className="card-title">{fruit.name}</h5>
+                <p>ID: {fruit._id}</p>
+                <p>{fruit.supplier}</p>
+                <p>price: ${fruit.price}</p>
+                <p className="text-danger fw-bolder">
+                  Quantity:{fruit.quantity}
+                </p>
+
+                <div class="card-body d-flex align-self-start">
+                  <button className="m-2" onClick={() => handleDelivered()}>
+                    Deliverd
+                  </button>
+
+                  <form className="d-flex m-2" onSubmit={stockUpdate}>
+                    <input
+                      className="w-50"
+                      ref={stockRef}
+                      type="number"
+                      name="added"
+                      id=""
+                    />
+                    <input type="submit" value="add stock" />
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+        <div>
           <button
             onClick={() => navigate("/manageitems")}
             type="button"
-            className="btn btn-warning"
+            className="manag-btn"
           >
-            Manag-item
+            All-manag-item
           </button>
-
-          <button onClick={() => handleDelivered()}>Deliverd</button>
-          <div>
-            <form className="d-flex" onSubmit={stockUpdate}>
-              <input
-                className="border"
-                ref={stockRef}
-                type="number"
-                name="added"
-                id=""
-              />
-              <input type="submit" value="add stock" />
-            </form>
-          </div>
         </div>
       </div>
     );
