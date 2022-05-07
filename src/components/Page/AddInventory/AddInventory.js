@@ -1,19 +1,23 @@
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
+import auth from '../../../firebase.init'
 import './AddInventory.css'
 
 const AddInventory = () => {
   const { register, handleSubmit } = useForm();
-  // const [user] = useAuthState(auth)
+  const [user] = useAuthState(auth);
+  const email =user.email;
   const onSubmit = (data) => {
-    console.log(data);
+    const newData = {...data, email}
+    console.log(newData);
     const url = `http://localhost:5000/fruitService`;
     fetch(url, {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(newData),
     })
       .then((res) => res.json())
       .then((result) => {
@@ -22,7 +26,9 @@ const AddInventory = () => {
   };
   return (
     <div className="">
-      <h4 className="addinventory-title">Please Add Your Inventory</h4>
+      <h4 className="addinventory-title">Please Add Your New Inventory</h4>
+      <h6 className="text-center">Email: {user.email}</h6>
+      <h6>{user.name}</h6>
       <form
         className="w-25 mx-auto d-flex flex-column"
         onSubmit={handleSubmit(onSubmit)}

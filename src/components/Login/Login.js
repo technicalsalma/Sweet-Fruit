@@ -106,20 +106,20 @@ const Login = () => {
                   className="text-primary pe-auto text-decoration-none"
                   onClick={navigateRegister}
                 >
-                  {" "}
-                  Please Register{" "}
+                 
+                  Please Register
                 </Link>
               </p>
 
               <p>
-                Forget Password?{" "}
+                Forget Password?
                 <button
                   to="/register"
                   className="btn btn-link text-primary pe-auto text-decoration-none"
                   onClick={resetPassword}
                 >
-                  Reset Password{" "}
-                </button>{" "}
+                  Reset Password
+                </button>
               </p>
               <SocialLogin></SocialLogin>
               <ToastContainer />

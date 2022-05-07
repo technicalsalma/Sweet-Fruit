@@ -1,12 +1,16 @@
 
-import React from "react";
-import useFruitItem from "../../Hook/useFuritItem";
 
+import React, { useEffect, useState } from "react";
+
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from "../../../firebase.init";
 import "./MyItems.css";
+import axios from "axios";
 
 const MyItems = () => {
-
-  const [fruits, setfruits] = useFruitItem();
+  
+   const [fruits, setfruits] = useState([]);
+   const [user] =useAuthState(auth);
 
   const handleButton = (id) => {
     const proceed = window.confirm("Do you want to delete?");
@@ -23,6 +27,19 @@ const MyItems = () => {
         });
     }
   };
+
+useEffect( () => {
+        const getItems = async() =>{
+            const email = user.email;
+            console.log(email)
+            const url = `http://localhost:5000/fruitServices?email=${email}`;
+            if(email){
+                const {data} = await axios.get(url);
+            setfruits(data);
+            }
+        }
+        getItems();
+    },[user])
 
   return (
     <div className="container">
