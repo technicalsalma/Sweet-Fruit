@@ -7,13 +7,7 @@ const FruitDetail = () => {
     const stockRef = useRef("");
     const [fruit, setFruit] =useState({});
     const navigate = useNavigate();
-    // const {_id, name, img, supplier, price, quantity, description } = fruit;
- 
-
- 
-    // const navigateToFruitDetail = (_id) => {
-    //   navigate(`/fruit/${_id}`);
-    // };
+    
     
     useEffect(()=>{
         const url = `http://localhost:5000/fruitService/${fruitId}`
@@ -104,7 +98,7 @@ const FruitDetail = () => {
                   Quantity:{fruit.quantity}
                 </p>
 
-                <div class="card-body d-flex align-self-start">
+                <div className="card-body d-flex align-self-start">
                   <button className="m-2" onClick={() => handleDelivered()}>
                     Deliverd
                   </button>
