@@ -1,0 +1,13 @@
+div h4{
+   color: rgb(58, 97, 30);
+}
+
+.text-design{
+    margin: 50px 0;
+}
+
+
+.text{
+    text-decoration: underline;
+    font-weight: bold;
+}

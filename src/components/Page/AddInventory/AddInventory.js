@@ -4,6 +4,7 @@ import './AddInventory.css'
 
 const AddInventory = () => {
   const { register, handleSubmit } = useForm();
+  // const [user] = useAuthState(auth)
   const onSubmit = (data) => {
     console.log(data);
     const url = `http://localhost:5000/fruitService`;
