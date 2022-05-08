@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import "./Login.css";
 import LoadingPage from "../LoadingPage/LoadingPage";
-import loginImg from "../../imges/login.png"
+import loginImg from "../../imges/login.png";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Login = () => {
@@ -33,8 +33,7 @@ const Login = () => {
   }
 
   if (user) {
-    
-    // navigate(from, { replace: true });
+    navigate(from, { replace: true });
   }
 
   if (error) {
@@ -45,11 +44,14 @@ const Login = () => {
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
 
-   await signInWithEmailAndPassword(email, password);
-   const { data } = await axios.post("http://localhost:5000/login",{email});
-   console.log(data);
-   localStorage.setItem('accesToken',data.accessToken);
-   navigate(from, { replace: true });
+    signInWithEmailAndPassword(email, password);
+    // const { data } = await axios.post(
+    //   "https://secret-plateau-50974.herokuapp.com/login",
+    //   { email }
+    // );
+    // console.log(data);
+    // localStorage.setItem("accesToken", data.accessToken);
+    // navigate(from, { replace: true });
   };
 
   const navigateRegister = (event) => {
@@ -111,7 +113,6 @@ const Login = () => {
                   className="text-primary pe-auto text-decoration-none"
                   onClick={navigateRegister}
                 >
-                 
                   Please Register
                 </Link>
               </p>

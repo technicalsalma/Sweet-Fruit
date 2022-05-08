@@ -5,7 +5,6 @@ import FruitServices from "../FruitServices/FruitServices";
 import useFruitItem from "../Hook/useFuritItem";
 import ExtraPart1 from "../Page/ExtraPart1/ExtraPart1";
 import Order from "../Page/Order/Order";
-import { BeakerIcon } from "@heroicons/react/solid";
 import './Home.css'
 
 const Home = () => {
