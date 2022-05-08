@@ -15,6 +15,7 @@ const AddInventory = () => {
     fetch(url, {
       method: "POST",
       headers: {
+        authorization: `${user.email} ${localStorage.getItem("accessToken")}`,
         "content-type": "application/json",
       },
       body: JSON.stringify(newData),

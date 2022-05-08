@@ -1,6 +1,7 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Button, Form } from "react-bootstrap";
 import {
+  useAuthState,
   useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
@@ -8,43 +9,65 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
+// import axios from "axios";
 import "./Login.css";
 import LoadingPage from "../LoadingPage/LoadingPage";
 import loginImg from "../../imges/login.png";
 import SocialLogin from "../SocialLogin/SocialLogin";
-
+import axios from "axios";
 const Login = () => {
   const emailRef = useRef("");
   const passwordRef = useRef("");
   const navigate = useNavigate();
   const location = useLocation();
 
+  const [signInWithEmailAndPassword, euser, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+  const [user] = useAuthState(auth);
+
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
   let from = location.state?.from?.pathname || "/";
   let errorItem;
 
-  const [signInWithEmailAndPassword, user, loading, error] =
-    useSignInWithEmailAndPassword(auth);
+  useEffect(() => {
+    if (euser) {
+      //jwt s
+      const url = "https://secret-plateau-50974.herokuapp.com/login";
 
-  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+      fetch(url, {
+        method: "POST",
+        body: JSON.stringify({
+          email: user?.email,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          localStorage.setItem("accessToken", data.token);
+          navigate(from, { replace: true });
+        });
+
+      // //jwt e
+    }
+  }, [euser, user, navigate, from]);
 
   if (loading || sending) {
     return <LoadingPage></LoadingPage>;
   }
 
-  if (user) {
-    navigate(from, { replace: true });
-  }
-
   if (error) {
     errorItem = <p className="text-danger">Error: {error?.message}</p>;
   }
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
 
     signInWithEmailAndPassword(email, password);
+    //jwt start
     // const { data } = await axios.post(
     //   "https://secret-plateau-50974.herokuapp.com/login",
     //   { email }
