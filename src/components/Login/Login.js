@@ -30,29 +30,30 @@ const Login = () => {
   let from = location.state?.from?.pathname || "/";
   let errorItem;
 
-  useEffect(() => {
-    if (euser) {
-      //jwt s
-      const url = "https://secret-plateau-50974.herokuapp.com/login";
+  // useEffect(() => {
+  //   if (user) {
+  //     //jwt s
+  //     const url = "http://localhost:5000/login";
 
-      fetch(url, {
-        method: "POST",
-        body: JSON.stringify({
-          email: user?.email,
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          localStorage.setItem("accessToken", data.token);
-          navigate(from, { replace: true });
-        });
+  //     fetch(url, {
+  //       method: "POST",
+  //       body: JSON.stringify({
+  //         email: user?.email,
+  //       }),
+  //       headers: {
+  //         "Content-type": "application/json; charset=UTF-8",
+  //       },
+  //     })
+  //       .then((response) => response.json())
+  //       .then((data) => {
+  //         console.log(data)
+  //         localStorage.setItem("accessToken", data.token);
+  //         navigate(from, { replace: true });
+  //       });
 
-      // //jwt e
-    }
-  }, [euser, user, navigate, from]);
+  //     // //jwt e
+  //   }
+  // }, [euser, user, navigate, from]);
 
   if (loading || sending) {
     return <LoadingPage></LoadingPage>;
@@ -61,20 +62,37 @@ const Login = () => {
   if (error) {
     errorItem = <p className="text-danger">Error: {error?.message}</p>;
   }
-  const handleSubmit = (event) => {
+  const handleSubmit =async (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
 
-    signInWithEmailAndPassword(email, password);
-    //jwt start
-    // const { data } = await axios.post(
-    //   "https://secret-plateau-50974.herokuapp.com/login",
-    //   { email }
-    // );
-    // console.log(data);
-    // localStorage.setItem("accesToken", data.accessToken);
-    // navigate(from, { replace: true });
+  await  signInWithEmailAndPassword(email, password);
+
+  await  useEffect(() => {
+      if (user) {
+        //jwt s
+        const url = "http://localhost:5000/login";
+
+        fetch(url, {
+          method: "POST",
+          body: JSON.stringify({
+            email: user?.email,
+          }),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            localStorage.setItem("accessToken", data.token);
+            navigate(from, { replace: true });
+          });
+
+        // //jwt e
+      }
+    }, []);
   };
 
   const navigateRegister = (event) => {
@@ -96,7 +114,7 @@ const Login = () => {
     <div className="container">
       <div className="login-container">
         <div>
-          <img src={loginImg} alt="" />
+          <img className="img-fluid" src={loginImg} alt="" />
         </div>
         <div>
           <div className="login-form-container">

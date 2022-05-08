@@ -47,7 +47,7 @@ const Register = () => {
     <div className="container">
       <div className="signup-container">
         <div className="signup-img">
-          <img src={signupimg} alt="" />
+          <img className="img-fluid" src={signupimg} alt="" />
         </div>
         <div className="register-form-container">
           <h2>Please Register </h2>

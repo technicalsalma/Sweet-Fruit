@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import "./MyItems.css";
-import axios from "axios";
+// import axios from "axios";
+// import useFruitItem from "../../Hook/useFuritItem";
 
 const MyItems = () => {
   //==============jwt========//
@@ -35,6 +36,7 @@ const MyItems = () => {
       },
     })
       .then((res) => res.json())
+      // .then((data) => console.log(data));
       .then((data) => setfruits(data));
   }, [user]);
 
