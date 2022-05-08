@@ -33,7 +33,7 @@ const FruitDetail = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        
         setFruit(updateStock);
       });
   };
@@ -41,7 +41,6 @@ const FruitDetail = () => {
   const stockUpdate = (event) => {
     event.preventDefault();
     const newStock = stockRef.current.value;
-    console.log(newStock);
     const updateStock = {
       quantity: parseInt(fruit.quantity) + parseInt(newStock),
       name: fruit.name,
@@ -62,8 +61,7 @@ const FruitDetail = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        setFruit(updateStock);
+         setFruit(updateStock);
       });
     event.target.reset();
   };

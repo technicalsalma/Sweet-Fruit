@@ -15,14 +15,14 @@ const AddInventory = () => {
     fetch(url, {
       method: "POST",
       headers: {
-        authorization: `${user.email} ${localStorage.getItem("accessToken")}`,
+        
         "content-type": "application/json",
       },
       body: JSON.stringify(newData),
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
+       
       });
   };
   return (
@@ -40,7 +40,7 @@ const AddInventory = () => {
         <input
           className="mb-2 border border-dark"
           placeholder="Suplier Name"
-          {...register("Suplier Name", { required: true, maxLength: 20 })}
+          {...register("supplier", { required: true, maxLength: 20 })}
         />
 
         <input

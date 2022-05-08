@@ -20,8 +20,7 @@ const MyItems = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
-          const remaining = fruits.filter((fruits) => fruits._id !== id);
+         const remaining = fruits.filter((fruits) => fruits._id !== id);
           setfruits(remaining);
         });
     }
@@ -29,14 +28,13 @@ const MyItems = () => {
 
   useEffect(() => {
     const url =
-      "https://secret-plateau-50974.herokuapp.com/fruitServices/myProduct";
+      "http://localhost:5000/fruitServices/myProduct";
     fetch(url, {
       headers: {
         authorization: `${user?.email} ${localStorage.getItem("accessToken")}`,
       },
     })
       .then((res) => res.json())
-      // .then((data) => console.log(data));
       .then((data) => setfruits(data));
   }, [user]);
 
