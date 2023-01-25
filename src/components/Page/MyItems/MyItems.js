@@ -14,7 +14,7 @@ const MyItems = () => {
   const handleButton = (id) => {
     const proceed = window.confirm("Do you want to delete?");
     if (proceed) {
-      const url = `https://secret-plateau-50974.herokuapp.com/fruitService/${id}`;
+      const url = `https://server-site-fruits.onrender.com/fruitService/${id}`;
       fetch(url, {
         method: "DELETE",
       })

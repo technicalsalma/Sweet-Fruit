@@ -4,7 +4,7 @@ const useFruitItem = () => {
   const [fruits, setfruits] = useState([]);
 
   useEffect(() => {
-    fetch("https://secret-plateau-50974.herokuapp.com/fruitService")
+    fetch("https://server-site-fruits.onrender.com/fruitService")
       .then((res) => res.json())
       .then((data) => setfruits(data));
   }, []);

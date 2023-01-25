@@ -11,7 +11,7 @@ const AddInventory = () => {
   const onSubmit = (data) => {
     const newData = { ...data, email };
     console.log(newData);
-    const url = `https://secret-plateau-50974.herokuapp.com/fruitService`;
+    const url = `https://server-site-fruits.onrender.com/fruitService`;
     fetch(url, {
       method: "POST",
       headers: {

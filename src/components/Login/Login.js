@@ -53,7 +53,7 @@ const Login = () => {
      
     await signInWithEmailAndPassword(email, password);
     const { data } = await axios.post(
-      "https://secret-plateau-50974.herokuapp.com/login",
+      "https://server-site-fruits.onrender.com/login",
       {
         email,
       }

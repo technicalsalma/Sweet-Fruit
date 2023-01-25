@@ -8,7 +8,7 @@ const FruitDetail = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const url = `https://secret-plateau-50974.herokuapp.com/fruitService/${fruitId}`;
+    const url = `https://server-site-fruits.onrender.com/fruitService/${fruitId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setFruit(data));
@@ -23,7 +23,7 @@ const FruitDetail = () => {
       supplier: fruit.supplier,
       img: fruit.img,
     };
-    const url = `https://secret-plateau-50974.herokuapp.com/fruitService/${fruitId}`;
+    const url = `https://server-site-fruits.onrender.com/fruitService/${fruitId}`;
     fetch(url, {
       method: "PUT",
       headers: {
@@ -51,7 +51,7 @@ const FruitDetail = () => {
     };
 
     // send data
-    const url = `https://secret-plateau-50974.herokuapp.com/fruitService/${fruitId}`;
+    const url = `https://server-site-fruits.onrender.com/fruitService/${fruitId}`;
     fetch(url, {
       method: "PUT",
       headers: {
